@@ -1,1 +1,119 @@
-<h1>トップページ</h1>
+<div class="body">
+  <div class="side-bar">
+    <div class="side-bar-header">
+      <div class="rogo">VIDEO</div>
+    </div>
+    <div class="side-bar-main">
+      <div class="select-1">
+        <div class="select-boxes">
+          <%= link_to "アカウント名 or ログイン", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "ログアウト or 新規登録", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "設定・サポート", '#', class: "select-box" %>
+        </div>
+      </div>
+      <div class="select-2">
+        <div class="select-home">
+          <%= link_to "ホーム", '#', class: "select-homeing" %>
+        </div>
+        <div class="select-home">
+          <%= link_to "ランキング", '#', class: "select-homeing" %>
+        </div>
+        <div class="select-home">
+          <%= link_to "視聴履歴", '#', class: "select-homeing" %>
+        </div>
+      </div>
+      <div class="select-3">
+        <div class="select-head">
+          <div class="select-heading">Genre</div>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "旅行", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "教育", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "音楽", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "料理", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "漫画・アニメ", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "Vlog", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "ペット", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "ゲーム", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "VTuber", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "ビジネス", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "カップル", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "バラエティ", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "フィットネス", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "メイク・ファッション", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "その他", '#', class: "select-box" %>
+        </div>
+      </div>
+      <div class="side-bar-footer">
+        <div class="select-boxes">
+          <%= link_to "お知らせ", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "よくある質問", '#', class: "select-box" %>
+        </div>
+        <div class="select-boxes">
+          <%= link_to "お問い合わせ", '#', class: "select-box" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-bar">
+    <div class="main-bar-header">
+      <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :hoge, placeholder: "動画の検索", class: "search-input" %>
+      <%  end %>
+    </div>
+    <div class="main-bar-main">
+      <div class="main-head">
+        <%= "現在選択されているセレクト"%>
+      </div>
+        <%# eachメソッドを使用して、動画を表示させる %>
+      <div class="video-all">
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+      </div>
+      <div class="main-footer">
+        ©2020 VIDEO ~REMAKE~　
+      </div>
+    </div>
+  </div>
+</div>
