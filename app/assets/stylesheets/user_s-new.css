@@ -1,0 +1,21 @@
+/* メイン１ */
+.s-n_main1 {
+  box-shadow: 5px 5px;
+  border: solid 1px black;
+  width: 30%;
+  padding-top: 75px;
+  margin-left: 3%;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.service-box {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.servise-select {
+  padding-bottom: 5px;
+}

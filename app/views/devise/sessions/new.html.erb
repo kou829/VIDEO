@@ -1,19 +1,30 @@
-<h2>Log in</h2>
+<div class="s-n_main1">
+  <h3>新規登録がお済みの方</h3>
 
-<%= form_with(model: @user, url: new_user_session_path) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "field_box" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", class: "field_box" %>
+    </div>
+
+    <div class="s-n_actions">
+      <%= f.submit "ログイン", id: "field_btn" %>
+    </div>
+  <% end %>
+</div>
+<div class="r-n_main2">
+  <div class="gest-head">ゲストでログインする方</div>
+  <div class="another-sign-up">
+    <%= link_to "ゲストログイン", "#", class: "another-select", id: "another-select1" %>
+    <%= link_to "Googleでのログイン", "#", class: "another-select", id: "another-select2"  %>
+    <%= link_to "Yahoo!でのログイン", "#", class: "another-select", id: "another-select3"  %>
+    <%= link_to "FaceBookでのログイン", "#", class: "another-select", id: "another-select4"  %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <div class="service-box">
+    <%= link_to "パスワードをお忘れですか？", "#", class: "servise-select" %>
+    <%= link_to "ヘルプ？", "#", class: "servise-select" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-
+</div>
