@@ -92,7 +92,7 @@
 /* メインバーのヘッダー ここから*/
 .main-bar {
   background-color: #0a043c;
-  height: 100%;
+  height: 100vh;
   width: 80vw;
 }
 

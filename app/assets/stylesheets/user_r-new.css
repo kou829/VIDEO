@@ -1,0 +1,97 @@
+/* 新規登録ページのCSS */
+
+/* メイン１  */
+.r-n_main1 {
+  box-shadow: 5px 5px;
+  border: solid 1px black;
+  width: 30%;
+  position: relative;
+  margin-left: 3%;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+h3 {
+  color: #03506f;
+  margin: 80px 0 20px 7.5vw;
+}
+
+.field-input {
+  position: absolute;
+  text-align: center;
+}
+
+.field {
+  margin: 30px 0 30px 4.5vw;
+}
+
+.field_box {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #bbbbbb;
+  padding-left: 10px;
+  border: none;
+}
+
+.actions {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#field_btn {
+  margin: 0px 0 0px 4.5vw;
+  border: solid 3px #03506f;
+  width: 300px;
+  height: 40px;
+  background-color: #ffffff;
+}
+
+/* メイン２ */
+
+.r-n_main2 {
+  box-shadow: 5px 5px;
+  border: solid 1px black;
+  width: 30%;
+  position: relative;
+  margin-left: 7.5%;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  display: inline;
+}
+
+.gest-head {
+  font-size: 16px;
+  color: #03506f;
+  text-align: center;
+  margin: 50px 0 30px 0;
+}
+
+.another-sign-up {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding-bottom: 40px;
+  border-bottom: solid 0.1px black;
+}
+
+.another-select {
+  text-decoration: none;
+  border: solid 3px #03506f;
+  padding: 10px;
+  margin: 10px;
+  color: #000000;
+}
+
+.service {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.terms-of-service {
+  text-decoration: none;
+  border: solid 3px #03506f;
+  padding: 10px 125px;
+  color: #000000;
+}
