@@ -1,27 +1,27 @@
 <div class="main-bar">
-  <div class="main-bar-header">
-    <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |form| %>
-      <%= form.text_field :hoge, placeholder: "動画の検索", class: "search-input" %>
-    <%  end %>
-  </div>
-  <div class="main-bar-main">
-    <div class="main-head">
-      <%= "現在選択されているセレクト"%>
+    <div class="main-bar-header">
+      <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :hoge, placeholder: "動画の検索", class: "search-input" %>
+      <%  end %>
     </div>
-      <%# eachメソッドを使用して、動画を表示させる %>
-    <div class="video-all">
-      <div class="sample-box"></div>
-      <div class="sample-box"></div>
-      <div class="sample-box"></div>
-      <div class="sample-box"></div>
-      <div class="sample-box"></div>
-      <div class="sample-box"></div>
-      <div class="sample-box"></div>
-      <div class="sample-box"></div>
-      <div class="sample-box"></div>
+    <div class="main-bar-main">
+      <div class="main-head">
+        <%= "現在選択されているセレクト"%>
+      </div>
+        <%# eachメソッドを使用して、動画を表示させる %>
+      <div class="video-all">
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+        <div class="sample-box"></div>
+      </div>
+      <div class="main-footer">
+        ©2020 VIDEO ~REMAKE~　
+      </div>
     </div>
-    <div class="main-footer">
-      ©2020 VIDEO ~REMAKE~　
-    </div>
-  </div>
 </div>
