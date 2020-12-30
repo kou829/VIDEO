@@ -7,11 +7,111 @@
     <%# リセットCSSの読み込み %>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">　
     <%# リセットCSSの読み込み %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
+  <div class="body">
+    <div class="side-bar">
+      <div class="side-bar-header">
+        <div class="rogo">VIDEO</div>
+      </div>
+      <div class="side-bar-main">
+        <div class="select-1">
+          <div class="select-boxes">
+            <% if user_signed_in? %>
+              <%= link_to current_user.nickname, '#', class: "select-box" %>
+            <% elsif %>
+              <%= link_to "ログイン", new_user_session_path, class: "select-box" %>
+            <% end %>
+          </div>
+          <div class="select-boxes">
+            <% if user_signed_in? %>
+              <%= link_to "ログアウト", '#', class: "select-box" %>
+            <% elsif %>
+              <%= link_to "新規登録", new_user_registration_path, class: "select-box" %>
+            <% end %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "設定・サポート", '#', class: "select-box" %>
+          </div>
+        </div>
+        <div class="select-2">
+          <div class="select-home">
+            <%= link_to "ホーム", root_path, class: "select-homeing" %>
+          </div>
+          <div class="select-home">
+            <%= link_to "ランキング", '#', class: "select-homeing" %>
+          </div>
+          <div class="select-home">
+            <%= link_to "視聴履歴", '#', class: "select-homeing" %>
+          </div>
+        </div>
+        <div class="select-3">
+          <div class="select-head">
+            <div class="select-heading">Genre</div>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "旅行", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "教育", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "音楽", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "料理", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "漫画・アニメ", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "Vlog", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "ペット", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "ゲーム", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "VTuber", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "ビジネス", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "カップル", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "バラエティ", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "フィットネス", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "メイク・ファッション", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "その他", '#', class: "select-box" %>
+          </div>
+        </div>
+        <div class="side-bar-footer">
+          <div class="select-boxes">
+            <%= link_to "お知らせ", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "よくある質問", '#', class: "select-box" %>
+          </div>
+          <div class="select-boxes">
+            <%= link_to "お問い合わせ", '#', class: "select-box" %>
+          </div>
+        </div>
+      </div>
+    </div>
     <%= yield %>
+  </div>
   </body>
 </html>
