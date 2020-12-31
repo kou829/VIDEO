@@ -17,7 +17,7 @@
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
 | title     | string     | null: false                    |
-| overview  | string     | null: false                    |
+| overview  | text       | null: false                    |
 | video     |            | null: false                    | active_storageの実装
 | genre     | integer    | null: false                    |
 | user      | references | null: false, foreign_key: true |
