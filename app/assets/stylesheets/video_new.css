@@ -1,0 +1,90 @@
+/* 動画投稿ページ */
+
+/* 動画投稿フォーム  */
+
+.v-n_main-full {
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #03506f;
+}
+
+.upload-screen {
+  margin: 20px 0 0 30px;
+  width: 50vw;
+  height: 50vh;
+  box-shadow: 5px 5px #bbbbbb;
+  border: solid 1px #bbbbbb;
+}
+
+.video-select-logo {
+  margin-left: 200px;
+}
+
+.video-select {
+  margin-left: 220px;
+}
+
+.video-title {
+  font-size: 20px;
+}
+
+.video-title-box {
+  width: 500px;
+  height: 30px;
+  font-size: 20px;
+  background-color: #bbbbbb;
+  padding-left: 10px;
+  border: none;
+  border-bottom: solid 3px #5f5f5f;
+  font-size: 20px;
+}
+
+.video-overview {
+  font-size: 20px;
+}
+
+.video-overview-box {
+  width: 500px;
+  height: 60px;
+  font-size: 20px;
+  background-color: #bbbbbb;
+  padding-left: 10px;
+  border: none;
+  border-bottom: solid 3px #5f5f5f;
+  font-size: 16px;
+}
+
+.show-screen {
+  margin: 20px 0 0 30px;
+  width: 50vw;
+  height: 30vh;
+  box-shadow: 5px 5px #bbbbbb;
+  border: solid 1px #bbbbbb;
+}
+
+.field-box {
+  margin: 20px 0 0 50px;
+}
+
+/* 過去にアップロードした動画 */
+
+.user-video {
+  overflow: scroll;
+  margin: 20px 0 0 30px;
+  width: 20vw;
+  height: 83vh;
+  box-shadow: 5px 5px #bbbbbb;
+  border: solid 1px #bbbbbb;
+}
+
+.sample-boxs {
+  text-align: center;
+  width: 240px;
+  height: 120px;
+  margin: 20px;
+  background-color: black;
+}
