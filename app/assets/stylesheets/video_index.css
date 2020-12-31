@@ -135,9 +135,15 @@
 /* 検索フォーム */
 
 .search-form {
-  padding-left: 75%;
+  margin-left: 68%;
   position: absolute;
   top: 40px;
+}
+
+.logo{
+  margin-left: 87%;
+  position: absolute;
+  top: -10px;
 }
 
 .search-input {

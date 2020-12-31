@@ -1,8 +1,17 @@
 <div class="main-bar">
     <div class="main-bar-header">
-      <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |form| %>
-        <%= form.text_field :hoge, placeholder: "動画の検索", class: "search-input" %>
-      <%  end %>
+      <div class="search">
+        <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :hoge, placeholder: "動画の検索", class: "search-input" %>
+        <% end %>
+      </div>
+      <% if user_signed_in? %>
+        <div class="logo-form">
+          <%= link_to("#", class: "logo") do %>
+            <%= image_tag "logo.png", width: "150px" %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
     <div class="main-bar-main">
       <div class="main-head">
