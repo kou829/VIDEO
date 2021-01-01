@@ -2,6 +2,7 @@ class VideosController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
+    @video = Video.all
   end
 
   def new
