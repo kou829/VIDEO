@@ -1,7 +1,7 @@
 /* メイン１ */
 .s-n_main1 {
-  box-shadow: 5px 5px;
-  border: solid 1px black;
+  box-shadow: 5px 5px #bbbbbb;
+  border: solid 1px #bbbbbb;
   width: 30%;
   padding-top: 75px;
   margin-left: 3%;

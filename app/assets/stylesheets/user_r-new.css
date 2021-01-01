@@ -2,8 +2,8 @@
 
 /* メイン１  */
 .r-n_main1 {
-  box-shadow: 5px 5px;
-  border: solid 1px black;
+  box-shadow: 5px 5px #bbbbbb;
+  border: solid 1px #bbbbbb;
   width: 30%;
   position: relative;
   margin-left: 3%;
@@ -55,8 +55,8 @@ h3 {
 /* メイン２ */
 
 .r-n_main2 {
-  box-shadow: 5px 5px;
-  border: solid 1px black;
+  box-shadow: 5px 5px #bbbbbb;
+  border: solid 1px #bbbbbb;
   width: 30%;
   position: relative;
   margin-left: 7.5%;
