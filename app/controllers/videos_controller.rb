@@ -21,6 +21,7 @@ class VideosController < ApplicationController
 
   def show
     @video = Video.find(params[:id])
+    @videos = Video.where.not(id: @video.id)
   end
 
   private
