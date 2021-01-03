@@ -5,9 +5,17 @@
         <div class="show_video">
           <video src="<%= rails_blob_path(@video.video) %>" type="video/mp4" controls="controls", width="726" height="447", class="video_tag"></video>
           <div class="video_details">
-            <div class="show-video-title"><%= @video.title %></div>
-            <%= image_tag "heart.png", width: "50px", height: "50px", class: "heart"%>
-            <%= image_tag "comment.png", width: "50px", height: "50px", class: "comment"%>
+            <div class="show-video-title">
+              <% if @video.title.length >= 10 %>
+                <%= truncate(@video.title, length: 13) %>
+              <% else %>
+                <%= @video.title %>
+              <% end %>
+            </div>
+            <%= image_tag "heart.png", width: "50px", height: "50px", class: "overview-service"%>
+            <%= image_tag "comment.png", width: "50px", height: "50px", class: "overview-service"%>
+            <%= link_to image_tag("edit.png", width: "50px", height: "50px", class: "overview-service"), edit_video_path %>
+            <%= link_to image_tag("Garbage can.png", width: "50px", height: "50px", class: "overview-service"), video_path, method: :delete, data: { confirm: '削除しますか？' } %>
           </div>
         </div>
       <% end %>
