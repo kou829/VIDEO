@@ -22,7 +22,7 @@
         <% @video.each do |video| %>
         <% if video.video.attached? %>
             <div class="video">
-              <%= link_to video_tag rails_blob_path(video.video), root_path, width: "300px", height: "200px", class: "index_video_box" %>
+              <%= link_to video_tag(rails_blob_path(video.video), width: "300px", height: "200px", class: "index_video_box"), video_path(video.id) %>
             </div>
         <% end %>
       <% end %>

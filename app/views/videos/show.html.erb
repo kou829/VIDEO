@@ -1,0 +1,33 @@
+<div class="v-s_main">
+  <div class="v-s_main1">
+    <div class="video_show1">
+      <% if @video.video.attached? %>
+        <div class="show_video">
+          <video src="<%= rails_blob_path(@video.video) %>" type="video/mp4" controls="controls", width="726" height="447", class="video_tag"></video>
+          <div class="video_details">
+            <div class="show-video-title"><%= @video.title %></div>
+            <%= image_tag "heart.png", width: "50px", height: "50px", class: "heart"%>
+            <%= image_tag "comment.png", width: "50px", height: "50px", class: "comment"%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="video-show2">
+      <div class="video-date"><%= @video.updated_at %></div>
+      <div class="video-overview">＜概要＞</div>
+      <div class="overview">
+        <%= @video.overview %>
+      </div>
+    </div>
+  </div>
+  <div class="v-s_main2">
+    <% @videos.each do |video| %>
+      <% if video.video.attached? %>
+          <div class="video">
+            <%= link_to video_tag(rails_blob_path(video.video), width: "270px", height: "170px", class: "show_video_box"), video_path(video.id) %>
+            <div class="show_video_box_title"><%= video.title %></div>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
