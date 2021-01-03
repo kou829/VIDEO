@@ -12,16 +12,20 @@
                 <%= @video.title %>
               <% end %>
             </div>
-            <%= image_tag "heart.png", width: "50px", height: "50px", class: "overview-service"%>
-            <%= image_tag "comment.png", width: "50px", height: "50px", class: "overview-service"%>
-            <%= link_to image_tag("edit.png", width: "50px", height: "50px", class: "overview-service"), edit_video_path %>
-            <%= link_to image_tag("Garbage can.png", width: "50px", height: "50px", class: "overview-service"), video_path, method: :delete, data: { confirm: '削除しますか？' } %>
+            <% if user_signed_in? %>
+              <%= image_tag "heart.png", width: "50px", height: "50px", class: "overview-service"%>
+              <%= image_tag "comment.png", width: "50px", height: "50px", class: "overview-service"%>
+              <% if current_user.id == @video.user_id %>
+                <%= link_to image_tag("edit.png", width: "50px", height: "50px", class: "overview-service"), edit_video_path %>
+                <%= link_to image_tag("Garbage can.png", width: "50px", height: "50px", class: "overview-service"), video_path, method: :delete, data: { confirm: '削除しますか？' } %>
+              <% end %>
+            <% end %>
           </div>
         </div>
       <% end %>
     </div>
     <div class="video-show2">
-      <div class="video-date">投稿日　<%= @video.updated_at %></div>
+      <div class="video-date">投稿日　<%= @video.updated_at %>　　<%= @video.genre.name %></div>
       <div class="video-overview">＜概要＞</div>
       <div class="overview">
         <%= @video.overview %>

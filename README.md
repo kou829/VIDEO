@@ -31,6 +31,16 @@
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | comment | string     | null: false                    |
+| user    | references | null: false, foreign_key: true |
+| video   | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :video
+
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
 | heart   | integer    | null: false                    |
 | user    | references | null: false, foreign_key: true |
 | video   | references | null: false, foreign_key: true |
