@@ -19,93 +19,93 @@
       </div>
       <div class="side-bar-main">
         <div class="select-1">
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box0">
             <% if user_signed_in? %>
-              <%= link_to current_user.nickname, '#', class: "select-box", id: "select-box1" %>
+              <%= link_to current_user.nickname, '#', class: "select-box" %>
             <% elsif %>
               <%= link_to "ログイン", new_user_session_path, class: "select-box" %>
             <% end %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box1">
             <% if user_signed_in? %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "select-box" %>
             <% elsif %>
               <%= link_to "新規登録", new_user_registration_path, class: "select-box" %>
             <% end %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box2">
             <%= link_to "設定・サポート", '#', class: "select-box" %>
           </div>
         </div>
         <div class="select-2">
-          <div class="select-home">
+          <div class="select-home", id="select-box3" >
             <%= link_to "ホーム", root_path, class: "select-homeing" %>
           </div>
-          <div class="select-home">
+          <div class="select-home", id="select-box4" >
             <%= link_to "ランキング", '#', class: "select-homeing" %>
           </div>
-          <div class="select-home">
+          <div class="select-home", id="select-box5" >
             <%= link_to "視聴履歴", '#', class: "select-homeing" %>
           </div>
         </div>
         <div class="select-3">
-          <div class="select-head">
+          <div class="select-head" >
             <div class="select-heading">Genre</div>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box7" >
             <%= link_to "旅行", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box8" >
             <%= link_to "教育", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box9" >
             <%= link_to "音楽", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box10" >
             <%= link_to "料理", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box11" >
             <%= link_to "漫画・アニメ", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box12" >
             <%= link_to "Vlog", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box13" >
             <%= link_to "ペット", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box14" >
             <%= link_to "ゲーム", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box15" >
             <%= link_to "VTuber", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box16" >
             <%= link_to "ビジネス", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box17" >
             <%= link_to "カップル", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box18" >
             <%= link_to "バラエティ", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box19" >
             <%= link_to "フィットネス", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box20" >
             <%= link_to "メイク・ファッション", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box21" >
             <%= link_to "その他", '#', class: "select-box" %>
           </div>
         </div>
         <div class="side-bar-footer">
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box22" >
             <%= link_to "お知らせ", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box23" >
             <%= link_to "よくある質問", '#', class: "select-box" %>
           </div>
-          <div class="select-boxes">
+          <div class="select-boxes", id="select-box24" >
             <%= link_to "お問い合わせ", '#', class: "select-box" %>
           </div>
         </div>
