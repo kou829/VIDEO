@@ -20,12 +20,12 @@
         <%# eachメソッドを使用して、動画を表示させる %>
       <div class="video-all">
         <% @video.each do |video| %>
-        <% if video.video.attached? %>
+          <% if video.video.attached? %>
             <div class="video">
               <%= link_to video_tag(rails_blob_path(video.video), width: "300px", height: "200px", class: "index_video_box"), video_path(video.id) %>
             </div>
+          <% end %>
         <% end %>
-      <% end %>
       </div>
       <div class="main-footer">
         ©2020 VIDEO ~REMAKE~　

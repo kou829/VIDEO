@@ -24,6 +24,30 @@ class VideosController < ApplicationController
     @videos = Video.where.not(id: @video.id)
   end
 
+  def edit
+    @video = Video.find(params[:id])
+  end
+
+  def update
+    @video = Video.find(params[:id])
+    if current_user.id == @video.user_id
+      @video.update(video_params)
+      redirect_to action: :show
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @video = Video.find(params[:id])
+    if current_user.id == @video.user_id
+      @video.destroy
+      redirect_to action: :index
+    else
+      render :edit
+    end
+  end
+
   private
 
   def video_params
