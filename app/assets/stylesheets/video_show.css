@@ -43,16 +43,22 @@
 }
 
 .video-date {
-  margin: 3px 0 10px 10px;
+  text-align: center;
+  margin: 3px 0 3px 0;
+  color: #03506f;
 }
 
 .video-overview {
+  padding: 5px 0 0 0;
   text-align: center;
+  color: #03506f;
+  border-top: solid 1px #ffe3d8;
 }
 
 .overview {
   margin: 10px 40px 0 40px;
   font-size: 18px;
+  color: #03506f;
 }
 
 .v-s_main2 {
