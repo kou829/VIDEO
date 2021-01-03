@@ -10,6 +10,7 @@ require("channels")
 require("../r_new");
 require("../v-new");
 require("../v-index");
+require("../select_box");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
