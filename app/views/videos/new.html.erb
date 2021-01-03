@@ -16,7 +16,7 @@
             <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"collection_select-box", id:"video-genre"}) %>
           </div>
           <div class="field-box">
-            <%= f.label :overview, "　　概要", class: "video-overview" %>
+            <%= f.label :overview, "　　概要", class: "video_overview" %>
             <%= f.text_area :overview, class: "video-overview-box" %>
           </div>
         </div>
