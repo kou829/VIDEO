@@ -9,7 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../r_new");
 require("../v-new");
-require("../v-index");
+require("../v-show");
 require("../select_box");
 
 

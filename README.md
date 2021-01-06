@@ -30,7 +30,7 @@
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| comment | string     | null: false                    |
+| text    | string     | null: false                    |
 | user    | references | null: false, foreign_key: true |
 | video   | references | null: false, foreign_key: true |
 

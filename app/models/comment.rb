@@ -3,7 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :video
 
   with_options presence: true do
-    validates :comment
+    validates :text
     validates :user_id
     validates :video_id
   end
