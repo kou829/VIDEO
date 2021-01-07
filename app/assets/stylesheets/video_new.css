@@ -21,7 +21,7 @@ h1 {
 }
 
 .video-select-logo {
-  margin-left: 200px;
+  margin: 40px 0 40px 250px;
 }
 
 .video-select {
@@ -43,7 +43,7 @@ h1 {
   font-size: 20px;
 }
 
-.video-overview {
+.video_overview {
   font-size: 20px;
 }
 

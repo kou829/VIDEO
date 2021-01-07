@@ -3,7 +3,7 @@
     <h1>あなたのお気に入りのVIDEOを皆さんに届けよう!</h1>
       <%= form_with(model: @video, local: true) do |f|%>
         <div class="upload-screen">
-          <%= image_tag "logo.png", class: "video-select-logo" %>
+          <%= image_tag "logo.png", width: "200px", class: "video-select-logo" %>
           <%= f.file_field :video, class: "video-select" %>
         </div>
         <div class="show-screen">
@@ -16,7 +16,7 @@
             <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"collection_select-box", id:"video-genre"}) %>
           </div>
           <div class="field-box">
-            <%= f.label :overview, "　　概要", class: "video-overview" %>
+            <%= f.label :overview, "　　概要", class: "video_overview" %>
             <%= f.text_area :overview, class: "video-overview-box" %>
           </div>
         </div>

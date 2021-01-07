@@ -1,41 +1,71 @@
-<div class="v-s_main">
-  <div class="v-s_main1">
-    <div class="video_show1">
-      <% if @video.video.attached? %>
-        <div class="show_video">
-          <video src="<%= rails_blob_path(@video.video) %>" type="video/mp4" controls="controls", width="726" height="447", class="video_tag"></video>
-          <div class="video_details">
-            <div class="show-video-title">
-              <% if @video.title.length >= 10 %>
-                <%= truncate(@video.title, length: 13) %>
-              <% else %>
-                <%= @video.title %>
+<div class=v-s_main_full>
+  <div class="v-s_main">
+    <div class="v-s_main1">
+      <div class="video_show1">
+        <% if @video.video.attached? %>
+          <div class="show_video">
+            <video src="<%= rails_blob_path(@video.video) %>" type="video/mp4" controls="controls", width="726" height="447", class="video_tag"></video>
+            <div class="video_details">
+              <div class="show-video-title">
+                <% if @video.title.length >= 10 %>
+                  <%= truncate(@video.title, length: 13) %>
+                <% else %>
+                  <%= @video.title %>
+                <% end %>
+              </div>
+              <% if user_signed_in? %>
+                <%= image_tag "heart.png", width: "50px", height: "50px", class: "overview-service"%>
+                <%= image_tag("comment.png", width: "50px", height: "50px", id: "overview-service") %>
+                <% if current_user.id == @video.user_id %>
+                  <%= link_to image_tag("edit.png", width: "50px", height: "50px", class: "overview-service"), edit_video_path %>
+                  <%= link_to image_tag("Garbage can.png", width: "50px", height: "50px", class: "overview-service"), video_path, method: :delete, data: { confirm: '削除しますか？' } %>
+                <% end %>
               <% end %>
             </div>
-            <%= image_tag "heart.png", width: "50px", height: "50px", class: "overview-service"%>
-            <%= image_tag "comment.png", width: "50px", height: "50px", class: "overview-service"%>
-            <%= link_to image_tag("edit.png", width: "50px", height: "50px", class: "overview-service"), edit_video_path %>
-            <%= link_to image_tag("Garbage can.png", width: "50px", height: "50px", class: "overview-service"), video_path, method: :delete, data: { confirm: '削除しますか？' } %>
           </div>
+        <% end %>
+      </div>
+      <div class="video-show2">
+        <div class="video-date">投稿日　<%= @video.updated_at %>　　<%= @video.genre.name %></div>
+        <div class="video-overview">＜概要＞</div>
+        <div class="overview">
+          <%= @video.overview %>
         </div>
-      <% end %>
-    </div>
-    <div class="video-show2">
-      <div class="video-date">投稿日　<%= @video.updated_at %></div>
-      <div class="video-overview">＜概要＞</div>
-      <div class="overview">
-        <%= @video.overview %>
       </div>
     </div>
-  </div>
-  <div class="v-s_main2">
-    <% @videos.each do |video| %>
-      <% if video.video.attached? %>
-          <div class="video">
-            <%= link_to video_tag(rails_blob_path(video.video), width: "270px", height: "170px", class: "show_video_box"), video_path(video.id) %>
-            <div class="show_video_box_title"><%= video.title %></div>
-          </div>
+
+    <div class="v-s_main2">
+      <% @videos.each do |video| %>
+        <% if video.video.attached? %>
+            <div class="video">
+              <%= link_to video_tag(rails_blob_path(video.video), width: "270px", height: "170px", class: "show_video_box"), video_path(video.id) %>
+              <div class="show_video_box_title"><%= video.title %></div>
+            </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
+  </div>
+  <div id="comment_main">
+    <div class="comment_main_box">
+      <div class="comment_input">
+        <% if user_signed_in? %>
+          <%= form_with(model: [@video, @comment], local: true) do |form| %>
+            <%= form.text_area :text, placeholder: "コメントする", rows: "2", class: "comment_input_box" %>
+            <%= form.submit "SEND", class:"send_btn" %>
+          <% end %>
+        <% else %>
+          <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
+          </strong>
+        <% end %>
+      </div>
+      <div class="comment_all">
+          <% @comments.each do |comment| %>
+            <p>
+              <div class="comment_date"><%= comment.created_at%></strong></div>
+              <div class="comment_text"><strong><%= comment.user.nickname %>:<%= comment.text %></div>
+            </p>
+          <% end %>
+      </div>
+    </div>
   </div>
 </div>

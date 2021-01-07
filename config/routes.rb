@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   get 'videos/index'
   root to: 'videos#index'
 
-  resources :videos
+  resources :videos do
+    resources :comments, only: :create
+  end
+
 end

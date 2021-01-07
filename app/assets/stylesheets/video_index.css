@@ -6,7 +6,7 @@
 
 .side-bar {
   background-color: #03506f;
-  height: 100%;
+  height: 100vh;
   width: 20vw;
 }
 
@@ -38,6 +38,7 @@
   text-decoration: none;
   font-size: 20px;
   color: #ffe3d8;
+  padding: 30px 44px;
 }
 
 .select-1 {
@@ -56,6 +57,7 @@
   text-decoration: none;
   font-size: 20px;
   color: #ffe3d8;
+  padding: 30px 70px;
 }
 
 .select-2 {
@@ -142,9 +144,9 @@
 }
 
 .logo{
-  margin-left: 87%;
+  margin-left: 91%;
   position: absolute;
-  top: -10px;
+  top: 15px;
 }
 
 .search-input {
