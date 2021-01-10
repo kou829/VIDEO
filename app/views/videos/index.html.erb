@@ -14,9 +14,15 @@
       <% end %>
     </div>
     <div class="main-bar-main">
-      <div class="main-head">
-        <%= "ホーム" %>
-      </div>
+      <% if @video.blank?	 %>
+        <div class="main-head-warning">
+          <%= "※まだアップロードされた動画はありません" %>
+        </div>
+      <% else %>
+        <div class="main-head">
+          <%= "ホーム" %>
+        </div>
+      <% end %>
         <%# eachメソッドを使用して、動画を表示させる %>
       <div class="video-all">
         <% @video.each do |video| %>
