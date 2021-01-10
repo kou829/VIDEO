@@ -1,0 +1,40 @@
+<div class="main-bar">
+    <div class="main-bar-header">
+      <div class="search">
+        <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :hoge, placeholder: "動画の検索", class: "search-input" %>
+        <% end %>
+      </div>
+      <% if user_signed_in? %>
+        <div class="logo-form">
+          <%= link_to(new_video_path, class: "logo") do %>
+            <%= image_tag "logo.png", width: "80px" %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <div class="main-bar-main">
+      <% if @video.blank?	 %>
+        <div class="main-head-warning">
+          <%= "※まだアップロードされた動画はありません" %>
+        </div>
+      <% else %>
+        <div class="main-head">
+          <%= @video.genre.name %>
+        </div>
+          <%# eachメソッドを使用して、動画を表示させる %>
+        <div class="video-all">
+          <% @videos.each do |video| %>
+            <% if video.video.attached? %>
+              <div class="video">
+                <%= link_to video_tag(rails_blob_path(video.video), width: "300px", height: "200px", class: "index_video_box"), video_path(video.id) %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+      <div class="main-footer">
+        ©2020 VIDEO ~REMAKE~　
+      </div>
+    </div>
+</div>

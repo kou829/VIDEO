@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end
 
+  get '/videos/genre/:id', to: "videos#genre"
+
   post '/videos/guest_sign_in', to: 'videos#new_guest'
 
 end

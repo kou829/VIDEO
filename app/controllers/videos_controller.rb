@@ -2,7 +2,7 @@ class VideosController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @video = Video.all
+    @video = Video.all.order(id: 'DESC')
   end
 
   def new
@@ -48,6 +48,11 @@ class VideosController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def genre
+    @video = Video.find_by(genre_id: params[:id])
+    @videos = Video.where(genre_id: params[:id]).order('created_at DESC')
   end
 
   # ゲストログイン機能
