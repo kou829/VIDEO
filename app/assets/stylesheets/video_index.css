@@ -1,12 +1,13 @@
 .body {
   display: flex;
+  position: absolute;
 }
 
 /* サイドバー */
 
 .side-bar {
   background-color: #03506f;
-  height: 100vh;
+  height: 100%;
   width: 20vw;
 }
 
@@ -94,9 +95,8 @@
 /* メインバーのヘッダー ここから*/
 .main-bar {
   background-color: #0a043c;
-  height: 100vh;
+  height: 100%;
   width: 80vw;
-  position: relative;
 }
 
 .main-bar-header {

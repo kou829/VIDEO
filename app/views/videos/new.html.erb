@@ -1,6 +1,6 @@
 <div class="v-n_main-full">
   <div class="v-n_main1">
-    <h1>あなたのお気に入りのVIDEOを皆さんに届けよう!</h1>
+    <h4>あなたのお気に入りのVIDEOを皆さんに届けよう!</h4>
       <%= form_with(model: @video, local: true) do |f|%>
         <div class="upload-screen">
           <%= image_tag "logo.png", width: "200px", class: "video-select-logo" %>
@@ -22,7 +22,7 @@
         </div>
   </div>
         <div class="v-n_main2">
-          <h1>過去にアップロードした動画</h1>
+          <h4>過去にアップロードした動画</h4>
           <div class="user-video">
             <% @videos.each do |video| %>
               <% if video.video.attached? %>
