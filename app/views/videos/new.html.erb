@@ -24,11 +24,14 @@
         <div class="v-n_main2">
           <h1>過去にアップロードした動画</h1>
           <div class="user-video">
-            <div class="sample-boxs"></div>
-            <div class="sample-boxs"></div>
-            <div class="sample-boxs"></div>
-            <div class="sample-boxs"></div>
-            <div class="sample-boxs"></div>
+            <% @videos.each do |video| %>
+              <% if video.video.attached? %>
+                  <div class="video">
+                    <%= link_to video_tag(rails_blob_path(video.video), width: "270px", height: "170px", class: "show_video_box"), video_path(video.id) %>
+                    <div class="show_video_box_title"><%= video.title %></div>
+                  </div>
+              <% end %>
+            <% end %>
           </div>
           <div class="v-n_actions">
             <%= f.submit "動画をアップロードする", id: "video_btn" %>

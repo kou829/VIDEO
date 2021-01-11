@@ -6,6 +6,7 @@ class VideosController < ApplicationController
   end
 
   def new
+    @videos = Video.where(id: current_user.video_ids)
     @video = Video.new
   end
 
