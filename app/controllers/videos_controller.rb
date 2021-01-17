@@ -1,4 +1,5 @@
 class VideosController < ApplicationController
+  before_action :set_video, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
@@ -21,18 +22,15 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video = Video.find(params[:id])
     @videos = Video.where.not(id: @video.id)
     @comment = Comment.new
     @comments = @video.comments.includes(:user)
   end
 
   def edit
-    @video = Video.find(params[:id])
   end
 
   def update
-    @video = Video.find(params[:id])
     if current_user.id == @video.user_id
       @video.update(video_params)
       redirect_to action: :show
@@ -42,7 +40,6 @@ class VideosController < ApplicationController
   end
 
   def destroy
-    @video = Video.find(params[:id])
     if current_user.id == @video.user_id
       @video.destroy
       redirect_to action: :index
@@ -74,4 +71,7 @@ class VideosController < ApplicationController
   end
 
 
+  def set_video
+    @video = Video.find(params[:id])
+  end
 end
