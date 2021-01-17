@@ -41,7 +41,6 @@
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| heart   | integer    | null: false                    |
 | user    | references | null: false, foreign_key: true |
 | video   | references | null: false, foreign_key: true |
 
