@@ -4,7 +4,7 @@ class CreateVideos < ActiveRecord::Migration[6.0]
       t.string        :title
       t.text          :overview
       t.integer       :genre_id
-      t.references    :user
+      t.references    :user, foreign_key: true
       t.timestamps
     end
   end
