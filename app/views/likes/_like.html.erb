@@ -1,0 +1,13 @@
+<% if current_user.likes.find_by(video_id: @video.id) %>
+  <%= link_to(video_like_path(@video), method: :delete) do %>
+    <%= image_tag "heart.png", width: "50px", height: "50px", class: "overview-service-no"%>
+  <% end %>
+<% else %>
+  <%= link_to(video_likes_path(@video), method: :post) do %>
+    <%= image_tag "heart.png", width: "50px", height: "50px", class: "overview-service"%>
+  <% end %>
+<% end %>
+
+
+
+

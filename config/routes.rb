@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :videos do
     resources :comments, only: :create
+    resources :likes, only: [:create, :destroy]
   end
 
   get '/videos/genre/:id', to: "videos#genre"
