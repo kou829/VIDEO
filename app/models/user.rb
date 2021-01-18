@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
          has_many :videos
          has_many :comments
-         has_many :likes
+         has_many :likes, dependent: :destroy
 
          validates :nickname, presence: true
 end

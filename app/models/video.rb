@@ -2,7 +2,7 @@ class Video < ApplicationRecord
   belongs_to :user
   has_many :comments
   has_one_attached :video
-  has_many :like
+  has_many :like, dependent: :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :genre
