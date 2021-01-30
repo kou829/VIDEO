@@ -4,6 +4,14 @@ class Video < ApplicationRecord
   has_one_attached :video
   has_many :like, dependent: :destroy
 
+  def self.search(search)
+    if search != ""
+      Video.where('title LIKE(?)', "%#{search}%")
+    else
+      Video.all
+    end
+  end
+
   extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :genre
 

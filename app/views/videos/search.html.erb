@@ -14,18 +14,12 @@
       <% end %>
     </div>
     <div class="main-bar-main">
-      <% if @video.blank?	 %>
-        <div class="main-head-warning">
-          <%= "※まだアップロードされた動画はありません" %>
-        </div>
-      <% else %>
-        <div class="main-head">
-          <%= "ホーム" %>
-        </div>
-      <% end %>
-        <%# eachメソッドを使用して、動画を表示させる %>
+      <div class="main-head">
+        <%= "検索結果" %>
+      </div>
+      <%# eachメソッドを使用して、動画を表示させる %>
       <div class="video-all">
-        <% @video.each do |video| %>
+        <% @videos.each do |video| %>
           <% if video.video.attached? %>
             <div class="video">
               <%= link_to video_tag(rails_blob_path(video.video), width: "300px", height: "200px", class: "index_video_box"), video_path(video.id) %>

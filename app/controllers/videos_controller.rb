@@ -53,6 +53,10 @@ class VideosController < ApplicationController
     @videos = Video.where(genre_id: params[:id]).order('created_at DESC')
   end
 
+  def search
+    @videos = Video.search(params[:keyword])
+  end
+
   # ゲストログイン機能
 
   def new_guest
